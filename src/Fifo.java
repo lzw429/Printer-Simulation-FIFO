@@ -1,2 +1,5 @@
-public class Fifo {
+public class Fifo extends Simulator {
+    public void simulate() {
+
+    }
 }
