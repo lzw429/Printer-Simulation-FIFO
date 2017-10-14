@@ -25,16 +25,16 @@ public class Queue<T> //双向链表实现
 
 
     public void enqueue(T t) {
-        front.next = front.next.prev = new Node<T>(t, front, front.next);
+        rear.prev = rear.prev.next = new Node<T>(t, rear.prev, rear);
         size++;
     }
 
     public T dequeue() {
         if (size == 0)
             return null;
-        Node<T> deleted = rear.prev;
-        deleted.prev.next = rear;
-        rear.prev = deleted.prev;
+        Node<T> deleted = front.next;
+        deleted.next.prev = front;
+        front.next = deleted.next;
         size--;
         return deleted.data;
     }
