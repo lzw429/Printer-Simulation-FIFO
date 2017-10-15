@@ -1,4 +1,4 @@
-public class Queue<T> //双向链表实现
+public class Queue<T> //双向链表实现的队列
 {
     private int size;
     //front与rear不存数据

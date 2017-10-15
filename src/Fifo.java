@@ -51,7 +51,6 @@ public class Fifo extends Simulator {
         DecimalFormat df = new DecimalFormat("#.0000");//保留四位小数
         writer.write("\n      Total jobs: " + totalJobs + "\n      Aggregate latency: " + (int) aggregateLatency + " seconds \n" + "      Mean latency: " + df.format(meanLatency) + " seconds \n");
         writer.close();
-
     }
 
     public Fifo() {
@@ -60,7 +59,7 @@ public class Fifo extends Simulator {
 
     public static void main(String[] args) throws IOException {
         Fifo fifo = new Fifo();
-        fifo.simulate("a.run", "a.out");
+        fifo.simulate("test.run", "test.out");
     }
 }
 
